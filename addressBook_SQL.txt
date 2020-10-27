@@ -2,3 +2,17 @@
  create database addressBook;
  use addressBook;
  select database();
+
+****UC2****
+ create table address_book
+    ->  (id INT unsigned NOT NULL AUTO_INCREMENT,
+    ->  first_name VARCHAR(150) NOT NULL,
+    ->  last_name VARCHAR(150),
+    -> address VARCHAR(150) NOT NULL,
+    ->  city VARCHAR(150) NOT NULL,
+    -> state VARCHAR(150) NOT NULL,
+    ->  ZIP INT unsigned NOT NULL,
+    ->  phone_number VARCHAR(10) NOT NULL,
+    -> email VARCHAR(150) NOT NULL,
+    -> PRIMARY KEY (id)
+    -> );
