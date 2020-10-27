@@ -27,3 +27,6 @@
 
 ****UC5****
 DELETE FROM address_book WHERE first_name='Jitendra';
+
+****UC6****
+select first_name,last_name from address_book where city='Jalore' AND state='Rajasthan';
