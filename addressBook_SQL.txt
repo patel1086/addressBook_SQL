@@ -24,3 +24,6 @@
 
 ****UC4****
  update address_book set zip=342001 where  first_name='Jitendra';
+
+****UC5****
+DELETE FROM address_book WHERE first_name='Jitendra';
