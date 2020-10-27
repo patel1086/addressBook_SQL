@@ -1,9 +1,13 @@
-****UC1****
+****UC1****Create Databse
+
  create database addressBook;
  use addressBook;
  select database();
 
-****UC2****
+
+
+****UC2****Create Table
+
  create table address_book
     ->  (id INT unsigned NOT NULL AUTO_INCREMENT,
     ->  first_name VARCHAR(150) NOT NULL,
@@ -17,28 +21,62 @@
     -> PRIMARY KEY (id)
     -> );
 
-****UC3****
+
+
+****UC3****Insert Data Into Table
+
  INSERT INTO address_book (first_name,last_name,address,city,state,ZIP,phone_number,email) VALUES(
     ->  'Jitendra','Patel','Lunawas Khara','Jodhpur','Rajasthan',342014,'9636638082','jitu@gmail.com'),
     -> ('Ram','Babu','Jhanwar','Jalore','Rajasthan',342067,'9571908082','ram@gmail.com');
 
-****UC4****
+
+
+****UC4****Update Table
+
  update address_book set zip=342001 where  first_name='Jitendra';
 
-****UC5****
+
+
+****UC5****Delete Row From Table
+
 DELETE FROM address_book WHERE first_name='Jitendra';
 
-****UC6****
+
+
+****UC6****Retrieve Data From Table
+
 select first_name,last_name from address_book where city='Jalore' AND state='Rajasthan';
 
-****UC7****
+
+
+****UC7****Count Total Entries In Table
+
 select count(city),count(state) from address_book;
 
-****UC8****
+
+
+****UC8****Sorting of Data
+
  select * from address_book where city='Jalore' order by first_name, last_name asc;
 
-****UC9****
+
+
+****UC9****Alter Table By Add One New Column
+
  alter table address_book add type VARCHAR(150) after last_name;
 
-****UC10****
+
+
+****UC10****Count entries by specific column
+
 select count(type) from address_book;
+
+
+
+****UC11****Add Two Different Type To Same Person Name
+
+INSERT INTO address_book (first_name,last_name,type,address,city,state,ZIP,phone_number,email) VALUES(
+    ->  'Jitendra','Patel','Friend','Lunawas Khara','Jodhpur','Rajasthan',342014,'9636638082','jitu@gmail.com');
+
+INSERT INTO address_book (first_name,last_name,type,address,city,state,ZIP,phone_number,email) VALUES(
+    -> 'Jitendra','Patel','Family','Lunawas Khara','Jodhpur','Rajasthan',342014,'9636638082','jitu@gmail.com');
