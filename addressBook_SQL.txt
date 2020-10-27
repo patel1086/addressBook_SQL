@@ -39,3 +39,6 @@ select count(city),count(state) from address_book;
 
 ****UC9****
  alter table address_book add type VARCHAR(150) after last_name;
+
+****UC10****
+select count(type) from address_book;
